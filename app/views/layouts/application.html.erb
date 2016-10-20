@@ -9,10 +9,8 @@
   </head>
 
   <body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "About us", about_path %>
-    <%= link_to "Contact us", contact_path %>
-    <%= yield %>
-
+  <%= render 'pages/header' %>
+  <%= yield %>
+  </div>
   </body>
 </html>
