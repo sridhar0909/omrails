@@ -10,6 +10,11 @@
 
   <body>
     <%= render 'pages/header' %>
+    
+    <% flash.each do |name, message| %>
+      <%= content_tag(:div, message, class: "alert alert-info #{name}")  %>
+    <% end %>    
+
     <%= yield %>
     <%= render 'pages/footer' %>
   </div>
