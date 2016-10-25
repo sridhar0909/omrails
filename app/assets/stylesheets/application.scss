@@ -2,6 +2,9 @@
 @import "bootstrap";
 @import "bootstrap_customizations.scss";
 
+@-ms-viewport{
+  width: device-width;
+}
 
 @import "pages";
 @import "sign_in_and_sign_up";
