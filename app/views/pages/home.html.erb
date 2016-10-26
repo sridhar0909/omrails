@@ -1,31 +1,37 @@
 <% if user_signed_in? %>
     <div class="jumbotron jumbotron-home">
         <div class="container">        
-                <h1>Welcome back!</h1>
+                <h1> back for more?</h1>
+                <h1> grumbl >> &nbsp keep programming! </h1>
+                <h1>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>> &nbsp &nbsp &nbsp share.your.story( )</h1>
+                <h1>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>> &nbsp <%= link_to "grumbl!", "#", class: "btn btn-primary btn-lg" %> </h1>
         </div>
+    </div>    
 <% else %>     
     <div class="jumbotron jumbotron-home">
         <div class="container">        
-                <h1>Welcome to Grumbl!</h1>
-                <h2>A platform for noobs to rave and rant about programming</h2>
-                <%= link_to "Sign up »", "#", class: "btn btn-primary btn-lg" %> 
+                <h1> noobs! </h1>
+                <h1> grumbl >> &nbsp if programming? </h1>
+                <h1> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>> &nbsp &nbsp &nbsp share.your.story( )</h1>
+                <h1> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>>  &nbsp <%= link_to "Sign up »", "#", class: "btn btn-primary btn-lg" %> </h1>
+                
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <h2>Rave</h2>
-                <p>Yeah, rave about whatever you're struggling with be it Javascript HTML or CSS or...</p>
+                <p>Yeah, rave about whatever you're excited about now, React people!</p>
                 <p><%= link_to "RAVE", "#", class: "btn btn-secondary" %></p>
             </div>
             <div class="col-md-4">
                 <h2>Rant</h2>
-                <p>Share your frustration with other equally frustrated humans for a while.</p>
+                <p>Share your pain with other equally frustrated humans...grrr...</p>
                 <p><%= link_to "RANT", "#", class: "btn btn-secondary" %></p>
             </div>
             <div class="col-md-4">
                 <h2>Review</h2>
-                <p>What did you think about that One Month HTML course you took a while back?</p>
+                <p>Now, what did you think about One Month Rails? Great! right?</p>
                 <p><%= link_to "REVIEW", "#", class: "btn btn-secondary" %></p>
             </div>
         </div>
