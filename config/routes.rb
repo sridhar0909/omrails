@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  ActiveAdmin.routes(self)
   devise_for :users
   as :user do
     get 'sign_in' => 'devise/sessions#new' 

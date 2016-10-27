@@ -1,39 +1,42 @@
 <% if user_signed_in? %>
     <div class="jumbotron jumbotron-home">
         <div class="container">        
-                <h1> back for more?</h1>
-                <h1> grumbl >> &nbsp keep programming! </h1>
-                <h1>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>> &nbsp &nbsp &nbsp share.your.story( )</h1>
-                <h1>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>> &nbsp <%= link_to "grumbl!", "#", class: "btn btn-primary btn-lg" %> </h1>
+                <h1> Grumbl</h1>
+                <h2> >> ??</h2>
+                <h2> >> ?? </h2>
+                <h2> >> ?? </h2>
+                <h2> >> ?? </h2>
         </div>
     </div>    
 <% else %>     
     <div class="jumbotron jumbotron-home">
         <div class="container">        
-                <h1> noobs! </h1>
-                <h1> grumbl >> &nbsp if programming? </h1>
-                <h1> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>> &nbsp &nbsp &nbsp share.your.story( )</h1>
-                <h1> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp>>  &nbsp <%= link_to "Sign up »", "#", class: "btn btn-primary btn-lg" %> </h1>
+                <h1> >> Grumbl </h1>
+                <h2> >> programming? </h2>
+                <h2> >> share.your.story( )</h2>
+                <h2> >> = inspire_others!</h2>
+                <h2> >> <%= link_to "Sign up »", "#", class: "btn btn-primary btn-lg" %> </h2>
                 
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2>Rave</h2>
-                <p>Yeah, rave about whatever you're excited about now, React people!</p>
-                <p><%= link_to "RAVE", "#", class: "btn btn-secondary" %></p>
+                <h2>Reviews</h2>
+                <p>What did you think about One Month Rails?</p>
+                <p><%= link_to "Reviews", "#", class: "btn btn-secondary" %></p>
             </div>
             <div class="col-md-4">
-                <h2>Rant</h2>
-                <p>Share your pain with other equally frustrated humans...grrr...</p>
-                <p><%= link_to "RANT", "#", class: "btn btn-secondary" %></p>
+                <h2>Resources</h2>
+                <p>Share the best online resources you've found.</p>
+                <p><%= link_to "Resources", "#", class: "btn btn-secondary" %></p>
             </div>
             <div class="col-md-4">
-                <h2>Review</h2>
-                <p>Now, what did you think about One Month Rails? Great! right?</p>
-                <p><%= link_to "REVIEW", "#", class: "btn btn-secondary" %></p>
+                <h2>Solutions</h2>
+                <p>Post solutions to problems you faced.</p>
+                <p><%= link_to "Solutions", "#", class: "btn btn-secondary" %></p>
             </div>
+            
         </div>
     </div>
 <% end %>  
