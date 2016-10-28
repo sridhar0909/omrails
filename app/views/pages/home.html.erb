@@ -38,7 +38,11 @@
         <div class="row">
             <div class="col-md-4">
                 <h4>Write reviews of courses</h4>
-                <p><%= Tweet.last.content %></p>
+                <% if Tweet.last !=nil %>
+                    <p><%= Tweet.last.content%></p>
+                <% else %>
+                    <p>Be the first to write a review</p>
+                <%end %>
                 <p><%= link_to "Reviews", tweets_path, class: "btn btn-secondary" %></p>
             </div>
             <div class="col-md-4">
