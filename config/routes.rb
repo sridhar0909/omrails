@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :tweets
+  as :user do
+    get 'reviews' => 'tweets#index'
+  end
   ActiveAdmin.routes(self)
   devise_for :users
   as :user do

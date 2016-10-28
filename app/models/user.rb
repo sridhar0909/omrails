@@ -5,6 +5,10 @@ class User < ApplicationRecord
           :rememberable, :trackable, :validatable
 # removed:recoverable
 
+ has_many :tweets
+
+
+
 # validates :password,  :presence => true,
 #                       :on => :create,
 #                       :format => {:with => /\A.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\@\#\$\%\^\&\+\=]).*\Z/ }
