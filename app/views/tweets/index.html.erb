@@ -15,7 +15,7 @@
         <% @tweets.each do |tweet| %>
           <tr>
             <td><%= tweet.user.email %></td>
-            <td><%= tweet.content %></td>
+            <td><%= tweet.content if tweet.user %></td>
             <td><%= link_to 'Show', tweet %></td>
             <% if tweet.user == current_user %>
               <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
