@@ -1,7 +1,6 @@
 <% if user_signed_in? %>
     <div class="jumbotron jumbotron-home">
         <div class="container">        
-                <h1>Grumbl</h1>
                 <h2>>> The old pond;</h2>
                 <h2>>> a frog jumps in -</h2>
                 <h2>>> the sound of water.</h2>
@@ -10,49 +9,39 @@
     </div>    
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h4>Write reviews of courses</h4>
+            <div class="col-md-6">
+                <h3>What inspired you to become a programmer?</h3>
+                <p><%= link_to "Stories", "#", class: "btn btn-secondary" %></p>
+            </div>
+            <div class="col-md-6">
+                <h3>Write reviews of bootcamps, tutorials & books</h3>
                 <p><%= link_to "Reviews", tweets_path, class: "btn btn-secondary" %></p>
-            </div>
-            <div class="col-md-4">
-                <h4>Share the best online resources</h4>
-                <p><%= link_to "Resources", "#", class: "btn btn-secondary" %></p>
-            </div>
-            <div class="col-md-4">
-                <h4>What do you want to learn next?</h4>
-                <p><%= link_to "Requests", "#", class: "btn btn-secondary" %></p>
             </div>
         </div>
     </div>
 <% else %>     
     <div class="jumbotron jumbotron-home">
         <div class="container">        
-                <h1>Grumbl</h1>
-                <h2>>> programming?</h2>
-                <h2>>> share.your.story( )</h2>
-                <h2>>> &inspire_others!</h2>
-                <h2><%= link_to "Sign up »", sign_up_path, class: "btn btn-primary btn-lg" %></h2>    
+                <h1>Grumbl >> Document your journey into programming</h1>
+                <h1><%= link_to "Sign up", sign_up_path, class: "btn btn-primary btn-lg" %></h1>    
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h4>Write reviews of courses</h4>
+             <div class="col-md-6">
+                <h3>What inspired you to become a programmer?</h3>
+                <p> Placeholder text Placeholder text Placeholder text.</p>
+                <p><%= link_to "Stories", sign_up_path, class: "btn btn-secondary" %></p>
+            </div>
+            <div class="col-md-6">
+                <h3>Write reviews of bootcamps, tutorials & books</h3>
                 <% if Tweet.last !=nil %>
                     <p><%= Tweet.last.content%></p>
                 <% else %>
                     <p>Be the first to write a review</p>
                 <%end %>
                 <p><%= link_to "Reviews", tweets_path, class: "btn btn-secondary" %></p>
-            </div>
-            <div class="col-md-4">
-                <h4>Share the best online resources</h4>
-                <p><%= link_to "Resources", sign_up_path, class: "btn btn-secondary" %></p>
-            </div>
-            <div class="col-md-4">
-                <h4>What do you want to learn next?</h4>
-                <p><%= link_to "Requests", sign_up_path, class: "btn btn-secondary" %></p>
-            </div>
+            </div> 
         </div>
     </div>
 <% end %>  
