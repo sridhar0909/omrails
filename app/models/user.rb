@@ -6,6 +6,7 @@ class User < ApplicationRecord
 # removed:recoverable
 
  has_many :tweets
+ has_many :stories
 
 
 

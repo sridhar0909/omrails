@@ -10,7 +10,7 @@
           <th colspan="3"></th>
         </tr>
       </thead>
-
+      
       <tbody>
         <% @tweets.each do |tweet| %>
           <tr>
@@ -25,11 +25,9 @@
         <% end %>
       </tbody>
     </table>
-
     <br>
-
     <% if user_signed_in? %>
       <%= link_to 'New Tweet', new_tweet_path %>
     <% end %>
- 
+
  </div>

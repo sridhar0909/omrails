@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :stories
   resources :tweets
   as :user do
     get 'reviews' => 'tweets#index'

@@ -1,0 +1,27 @@
+<div class = "container">
+
+    <p>
+      <strong>User:</strong>
+      <%= @story.user.email %>
+    </p>
+
+    <p>
+      <strong>Date:</strong>
+      <%= @story.date %>
+    </p>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @story.title %>
+    </p>
+
+    <p>
+      <strong>Story:</strong>
+      <%= @story.story %>
+    </p>
+
+ <% if @story.user == current_user %> 
+    <%= link_to 'Edit', edit_story_path(@story) %> |
+ <%end%>
+    <%= link_to 'Back', stories_path %>
+</div>

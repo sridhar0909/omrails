@@ -1,0 +1,39 @@
+<div class = "container">
+
+    <h1>Stories</h1>
+
+    <table class = "table">
+      <thead class = "thead-inverse">
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Story</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @stories.each do |story| %>
+          <tr>
+            <td><%= story.user.email %></td>
+            <td><%= story.date %></td>
+            <td><%= story.title %></td>
+            <td><%= story.story if story.user %></td>
+            <td><%= link_to 'Show', story %></td>
+            <% if story.user == current_user %>
+                <td><%= link_to 'Edit', edit_story_path(story) %></td>
+                <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <%end%>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    <% if user_signed_in? %>
+        <%= link_to 'New Story', new_story_path %>
+    <% end %>
+
+ </div>   
+
