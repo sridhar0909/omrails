@@ -1,33 +1,29 @@
 <div class = "container">
-
-    <h1>Reviews</h1>
-
-    <table class = "table">
-      <thead class = "thead-inverse">
-        <tr>
-          <th>User</th>
-          <th>Content</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-      
-      <tbody>
-        <% @tweets.each do |tweet| %>
-          <tr>
-            <td><%= tweet.user.email %></td>
-            <td><%= tweet.content if tweet.user %></td>
-            <td><%= link_to 'Show', tweet %></td>
-            <% if tweet.user == current_user %>
-              <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-              <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-            <% end %>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <br>
-    <% if user_signed_in? %>
-      <%= link_to 'New Tweet', new_tweet_path %>
-    <% end %>
-
+  <!-- <h1>Reviews</h1> -->
+     <div class = "row">
+        <div class = "col-md-4">
+           <div class="card card-block">
+              <% if user_signed_in? %>
+                 <h4 class="card-title">Your Account</h4>
+                 <p class="card-text"><%= current_user.username %></p>
+                 <a href="#" class="card-link">Card link</a>
+                 <a href="#" class="card-link">Another link</a>
+              <% else %>
+                 <h4 class="card-title">Hi there!</h4>
+                 <p class="card-text">What are you waiting for?</p>
+                 <h1><%= link_to "Sign up", sign_up_path, class: "btn btn-primary btn-lg" %></h1>
+              <% end %>
+           </div>
+        </div>
+        <div class = "col-md-8">
+            <ul class="list-group">
+                <% @tweets.each do |tweet| %>
+                    <%= link_to tweet, class: "list-group-item list-group-item-action" do %>
+                        <h5 class="list-group-item-heading"><%= tweet.user.username %></h5>
+                        <p class="list-group-item-text"><%= tweet.content if tweet.user %></p>
+                    <%end%>  
+                <% end %>
+            </ul>       
+      </div>
+   </div>
  </div>

@@ -1,15 +1,24 @@
 <div class = "container">
-    <p>
-      <strong>User:</strong>
-      <%= @tweet.user.email %>
-    </p>
+  <div class = "row">
+    <div class ="offset-md-2 col-md-8">
+      <div class="card card-block">
+        <h4 class="card-title"><%= @tweet.user.username%></h4>
+        <p class="card-text"><%= @tweet.content %></p>
+        <% if @tweet.user == current_user %> 
+          <%= link_to 'Edit', edit_tweet_path(@tweet), class: "card-link"  %>
+          <%= link_to 'Delete', @tweet, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+       <%= link_to 'Back', tweets_path, class: "card-link" %>
+     </div>
+     <!-- <p>
+        <strong>User:</strong>
+        <%= @tweet.user.email %>
+     </p> -->
 
-    <p>
-      <strong>Content:</strong>
-      <%= @tweet.content %>
-    </p>
-    <% if @tweet.user == current_user %> 
-      <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
-    <% end %>
-    <%= link_to 'Back', tweets_path %>
+     <!--  <p>
+        <strong>Content:</strong>
+        <%= @tweet.content %>
+      </p> -->
+    </div>
+  </div>
 </div>

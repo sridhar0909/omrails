@@ -25,6 +25,7 @@ $gray-lighter:              #eceeef;
 $gray-lightest:             #f7f7f9;
 
 $brand-primary:             #0275d8;
+
 $brand-success:             #5cb85c;
 $brand-info:                #5bc0de;
 $brand-warning:             #f0ad4e;
@@ -35,7 +36,7 @@ $brand-inverse:             $gray-dark;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-rounded:            true;
+$enable-rounded:            false;
 $enable-shadows:            false;
 $enable-gradients:          false;
 $enable-transitions:        false;
@@ -53,7 +54,7 @@ $border-width: 1px;
 //
 // Settings for the `<body>` element.
 
-$body-bg:    #fff;
+// $body-bg:    #fff;
 $body-color: $gray-dark;
 
 
@@ -63,6 +64,8 @@ $body-color: $gray-dark;
 // Style anchor elements.
 
 $link-color:            $brand-primary;
+
+
 $link-decoration:       none;
 $link-hover-color:      darken($link-color, 15%);
 $link-hover-decoration: underline;
@@ -134,3 +137,6 @@ $navbar-light-disabled-color:       rgba(0,0,0,.15);
 
 $jumbotron-padding:              2rem;
 $jumbotron-bg:                   $gray-lighter;
+
+
+

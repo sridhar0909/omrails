@@ -1,27 +1,17 @@
 <div class = "container">
-
-    <p>
-      <strong>User:</strong>
-      <%= @story.user.email %>
-    </p>
-
-    <p>
-      <strong>Date:</strong>
-      <%= @story.date %>
-    </p>
-
-    <p>
-      <strong>Title:</strong>
-      <%= @story.title %>
-    </p>
-
-    <p>
-      <strong>Story:</strong>
-      <%= @story.story %>
-    </p>
-
- <% if @story.user == current_user %> 
-    <%= link_to 'Edit', edit_story_path(@story) %> |
- <%end%>
-    <%= link_to 'Back', stories_path %>
+  <div class = "row">
+    <div class ="offset-md-2 col-md-8">
+      <div class="card card-block">
+        <h4 class="card-title"><%= @story.title %></h4>
+        <p class="card-text"><strong><%= @story.user.username %></strong></p>
+        <p><small><%= @story.date %></small></p>
+        <p class="card-text"><%= @story.story %></p>
+        <% if @story.user == current_user %> 
+          <%= link_to 'Edit', edit_story_path(@story), class: "card-link"  %>
+          <%= link_to 'Delete', @story, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        <%= link_to 'Back', stories_path, class: "card-link" %>
+      </div>
+    </div>
+  </div>
 </div>

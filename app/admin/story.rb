@@ -13,6 +13,6 @@ ActiveAdmin.register Story do
 #   permitted
 # end
 
-permit_params :user, :content
+permit_params :user, :date, :title, :story
 
 end
