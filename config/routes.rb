@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  #get 'users/show'
+  get 'users/:username' => 'users#show', as: 'user'
+
   resources :stories
   resources :tweets
   as :user do
@@ -10,7 +13,7 @@ Rails.application.routes.draw do
   as :user do
     get 'sign_in' => 'devise/sessions#new' 
     delete 'sign_out' => 'devise/sessions#destroy' 
-    get 'sign_up' => 'devise/registrations#new' 
+    get 'sign_up' =>'devise/registrations#new' 
     get 'account' => 'devise/registrations#edit'
   end
 
@@ -18,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'pages#about'
   
-  get 'contact' => 'pages#contact'
+  get 'contact' =>'pages#contact'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

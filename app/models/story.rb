@@ -2,7 +2,8 @@ class Story < ApplicationRecord
   belongs_to :user
 
   validates :user, presence: true
-  validates :title, presence: true, length: { maximum: 100}
-  validates :story, presence: true, length: { maximum: 500}
+  validates :title, presence: true, length: { maximum: 200}
+  validates :story, presence: true, length: { maximum: 10000}
+
 end 
  

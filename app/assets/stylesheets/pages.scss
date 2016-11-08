@@ -4,11 +4,14 @@
 
 .jumbotron-home {
     // background-image: url(image_path('home-bg.jpg'));
-    background-image: url(image_path('Grumbl_image.jpg'));
+    // background-image: url(image_path('Grumbl_image.jpg'));
+    background-image: url(image_path('typewriter.jpeg'));
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    color: white;
+    color: #F7CA18;
 }
 
-
+body {
+  background-color: #ECECEC;
+}

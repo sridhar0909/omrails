@@ -3,7 +3,7 @@
     <div class ="offset-md-2 col-md-8">
       <div class="card card-block">
         <h4 class="card-title"><%= @story.title %></h4>
-        <p class="card-text"><strong><%= @story.user.username %></strong></p>
+        <p class="card-text"><strong><%= link_to @story.user.username, user_path(@story.user.username) %></strong></p>
         <p><small><%= @story.date %></small></p>
         <p class="card-text"><%= @story.story %></p>
         <% if @story.user == current_user %> 
