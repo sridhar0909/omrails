@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
   
+  get 'feed', to: 'feed#show'
+
   #get 'users/show'
-  get 'users/:username' => 'users#show', as: 'user'
+  # get 'users/:username' => 'users#show', as: 'user'
+
+  resources :users, only: :show, param: :username do 
+    member do
+      post 'follow', to: 'follows#create'
+      delete 'unfollow', to: 'follows#destroy'
+    end
+  end
 
   resources :stories
   resources :tweets
