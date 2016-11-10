@@ -36,6 +36,8 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 
+gem 'acts_as_votable', '~> 0.10.0'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end

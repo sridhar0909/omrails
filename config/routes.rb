@@ -12,7 +12,13 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :stories
+  resources :stories do
+    member do 
+      post 'vote', to: 'votes#create'
+      delete 'unvote', to: 'votes#destroy'
+    end
+  end
+
   resources :tweets
   as :user do
     get 'reviews' => 'tweets#index'

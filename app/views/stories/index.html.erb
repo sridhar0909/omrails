@@ -4,10 +4,8 @@
          <div class = "col-md-4">
             <div class="card card-block">
                <% if user_signed_in? %>
-                  <h4 class="card-title">Your Account</h4>
+                  <h4 class="card-title">Account</h4>
                   <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
                <% else %>
                 <h4 class="card-title">Hi there!</h4>
                 <p class="card-text">What are you waiting for?</p>
@@ -22,11 +20,18 @@
                       <h5 class="list-group-item-heading"><%= story.title %></h5>
                       <p class="list-group-item-heading"><%= story.user.username %></p>
                       <p class="list-group-item-text"><%= story.story if story.user %></p>
-                  <%end%>  
+                      <p>Votes: <%= story.votes_for.up.size %></p>
+                  <%end%> 
+                  <% if user_signed_in? %>
+                    <% if current_user.voted_up_on? story %> 
+                      <%= link_to 'Unvote', unvote_story_path(story), method: :delete %>
+                    <% else %>      
+                      <%= link_to 'Vote', vote_story_path(story), method: :post %>
+                    <% end %>
+                   <% end %> 
               <% end %>
            </ul> 
         </div>
      </div>  
  </div>   
-
 
